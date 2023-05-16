@@ -1,6 +1,7 @@
 import { NewsArticle } from '@/models/NewsArticles';
 import Container from '../Container';
 import NewsArticleList from './NewsArticleList';
+import SignUp from '../SignUp';
 
 interface NewsComponentProps {
   articles: NewsArticle[];
@@ -14,6 +15,7 @@ const News = ({ articles }: NewsComponentProps) => {
           Latest News
         </h2>
         <NewsArticleList articles={articles} />
+        <SignUp />
       </Container>
     </section>
   );

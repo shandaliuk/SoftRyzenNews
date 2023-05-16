@@ -1,21 +1,31 @@
+import { Link } from 'react-scroll';
+
 const NavLinkList = () => {
   return (
     <ul className="flex gap-10">
       <li>
-        <a
-          href="#hero"
-          className="text-xs text-amber-200 uppercase font-bold md:text-sm lg:text-lg"
+        <Link
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="text-xs text-amber-200 uppercase font-bold md:text-sm lg:text-lg cursor-pointer"
         >
           1st <span className="hidden sm:inline-block">Section</span>
-        </a>
+        </Link>
       </li>
       <li>
-        <a
-          href="#news"
-          className="text-xs text-amber-200 uppercase font-bold md:text-sm lg:text-lg"
+        <Link
+          to="news"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="text-xs text-amber-200 uppercase font-bold md:text-sm lg:text-lg cursor-pointer"
         >
           2nd <span className="hidden sm:inline-block">Section</span>
-        </a>
+        </Link>
       </li>
     </ul>
   );

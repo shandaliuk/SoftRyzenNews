@@ -13,7 +13,7 @@ const NewsArticleList = ({ articles }: NewsArticleListProps) => {
           <Article article={article} />
         </li>
       ))}
-      <li className="md: hidden lg:block">
+      <li className="md:hidden xl:block">
         <Article article={articles[8]} />
       </li>
     </ul>

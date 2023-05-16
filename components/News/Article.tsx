@@ -6,7 +6,6 @@ interface BigArticleComponentProps {
 }
 
 const Article = ({ article }: BigArticleComponentProps) => {
-  console.log(article);
   return (
     <article className="p-8 bg-zinc-200 md:w-[340px] md:h-[296px] xl:w-[390px]">
       <h3 className="text-2xl font-extrabold text-orange-950">
