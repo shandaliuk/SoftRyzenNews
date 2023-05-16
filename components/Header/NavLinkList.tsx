@@ -11,7 +11,7 @@ const NavLinkList = () => {
       </li>
       <li>
         <a
-          href=""
+          href="#news"
           className="text-xs text-amber-200 uppercase font-bold md:text-sm lg:text-lg"
         >
           2nd <span className="hidden sm:inline-block">Section</span>
