@@ -3,7 +3,7 @@ const NavLinkList = () => {
     <ul className="flex gap-10">
       <li>
         <a
-          href=""
+          href="#hero"
           className="text-xs text-amber-200 uppercase font-bold md:text-sm lg:text-lg"
         >
           1st <span className="hidden sm:inline-block">Section</span>
