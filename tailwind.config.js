@@ -17,6 +17,7 @@ module.exports = {
       },
       colors: {
         main: '#E2D28C',
+        accent: '#C7D1D4',
       },
       boxShadow: {
         strict: '6px 6px 0px 0px',

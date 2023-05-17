@@ -10,7 +10,7 @@ const NavLinkList = () => {
           smooth={true}
           offset={-110}
           duration={500}
-          className="block py-3 uppercase text-[16px] text-center md:text-[20px] xl:text-[30px] cursor-pointer border-r border-black"
+          className="block py-3 uppercase text-[16px] text-center md:text-[20px] xl:text-[30px] cursor-pointer border-r border-black focus:bg-accent hover:bg-accent transition-color duration-300"
         >
           TRENDING
         </Link>
@@ -22,7 +22,7 @@ const NavLinkList = () => {
           smooth={true}
           offset={-110}
           duration={500}
-          className="block py-3 text-[16px] text-center md:text-[20px] xl:text-[30px] cursor-pointer"
+          className="block py-3 text-[16px] text-center md:text-[20px] xl:text-[30px] cursor-pointer focus:bg-accent hover:bg-accent transition-color duration-300"
         >
           NEWS
         </Link>

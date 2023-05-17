@@ -14,15 +14,16 @@ interface FormValues {
 const ContactsForm = () => {
   const form = useForm<FormValues>();
 
-  const { register, control, handleSubmit, formState, reset, getValues } = form;
+  const { register, control, handleSubmit, formState, reset, setValue } = form;
 
-  const [isCheckboxActive, setCheckboxActivity] = useState(() => {
-    return getValues('agreement');
-  });
+  const [isCheckboxActive, setCheckboxActivity] = useState(false);
 
   const { errors } = formState;
 
-  const handleCheckboxClick = () => setCheckboxActivity(state => !state);
+  const handleCheckboxClick = () => {
+    setCheckboxActivity(state => !state);
+    setValue('agreement', isCheckboxActive);
+  };
 
   const onSubmit = (data: FormValues) => {
     console.log(data);
@@ -30,7 +31,7 @@ const ContactsForm = () => {
   };
 
   return (
-    <div className="pt-8">
+    <div className="pt-8 pb-8 border-b border-black">
       <Container>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -55,7 +56,7 @@ const ContactsForm = () => {
               })}
               className={`block border ${
                 errors.name ? 'border-red-400' : 'border-black'
-              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict`}
+              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.name ? (
               <p className="text-red-400 text-center absolute bottom-1 right-2/4 translate-x-2/4 text-sm">
@@ -84,7 +85,7 @@ const ContactsForm = () => {
               })}
               className={`block border ${
                 errors.phone ? 'border-red-400' : 'border-black'
-              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict`}
+              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.phone ? (
               <p className="text-red-400 text-center absolute bottom-1 text-sm w-full right-2/4 translate-x-2/4">
@@ -112,7 +113,7 @@ const ContactsForm = () => {
               })}
               className={`block border ${
                 errors.email ? 'border-red-400' : 'border-black'
-              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict`}
+              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.email ? (
               <p className="text-red-400 text-center absolute bottom-1 text-sm w-full right-2/4 translate-x-2/4">
@@ -137,14 +138,15 @@ const ContactsForm = () => {
               className="none"
               onClick={handleCheckboxClick}
             />
-            <div
+            <button
+              type="button"
               className={`${isCheckboxActive ? 'bg-main' : 'bg-white'} ${
                 errors.agreement ? 'border-red-400' : 'border-black'
-              } inline-flex items-center justify-center w-5 h-5 border cursor-pointer shadow-strictMini`}
+              } inline-flex items-center justify-center w-5 h-5 border cursor-pointer shadow-strictMini focus:bg-accent transition-color duration-300`}
               onClick={handleCheckboxClick}
             >
               {isCheckboxActive ? <Check className="w-full h-full" /> : null}
-            </div>
+            </button>
             {errors.agreement ? (
               <p className="text-red-400 text-center absolute bottom-1 text-sm w-full right-2/4 translate-x-2/4">
                 {errors.agreement.message}
@@ -153,7 +155,7 @@ const ContactsForm = () => {
           </div>
           <button
             type="submit"
-            className="block mx-auto py-3 px-5 bg-main md:text-lg text-centersm:w-3/6 lg:w-2/5 xl:text-2xl  border border-black"
+            className="block mx-auto py-3 px-5 bg-main uppercase md:text-lg text-centersm:w-3/6 lg:w-1/5 xl:text-2xl  border border-black shadow-strict focus:bg-accent hover:bg-accent transition-color duration-300"
           >
             Submit
           </button>

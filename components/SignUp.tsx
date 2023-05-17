@@ -8,7 +8,7 @@ const SignUp = () => {
       </h4>
       <Link
         href="/contacts"
-        className="p-3 bg-zinc-200 text-center sm:w-3/6 sm:mx-auto lg:w-2/5 md:text-lg xl:text-2xl border border-black"
+        className="p-3 bg-zinc-200 text-center sm:w-3/6 sm:mx-auto lg:w-2/5 md:text-lg xl:text-2xl border border-black focus:bg-accent hover:bg-accent transition-color duration-300"
       >
         Leave application
       </Link>

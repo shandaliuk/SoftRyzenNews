@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Oswald } from 'next/font/google';
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer';
 
 const oswald = Oswald({ subsets: ['latin'] });
 
@@ -21,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <Component {...pageProps} />
-      <footer>Footer</footer>
+      <Footer />
     </div>
   );
 }
