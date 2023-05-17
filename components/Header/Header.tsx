@@ -4,7 +4,7 @@ import NavLinkList from './NavLinkList';
 
 const Header = () => {
   return (
-    <header className="fixed bg-main w-full">
+    <header className="fixed bg-main w-full z-50">
       <nav>
         <div className="flex items-center border-b border-black">
           <Container>

@@ -10,13 +10,19 @@ interface NewsComponentProps {
 const News = ({ articles }: NewsComponentProps) => {
   return (
     <section id="news">
-      <Container>
-        <h2 className="text-3xl font-extrabold mb-4 text-orange-950 after:content-[''] after:block after:w-full after:h-px after:bg-orange-950">
-          Latest News
-        </h2>
-        <NewsArticleList articles={articles} />
-        <SignUp />
-      </Container>
+      <div className="border-b border-black">
+        <Container>
+          <h2 className="text-[30px] font-black uppercase text-center">
+            Latest News
+          </h2>
+        </Container>
+      </div>
+      <div className="border-b border-black pb-4">
+        <Container>
+          <NewsArticleList articles={articles} />
+        </Container>
+      </div>
+      <SignUp />
     </section>
   );
 };

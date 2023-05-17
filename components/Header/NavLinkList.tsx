@@ -10,7 +10,7 @@ const NavLinkList = () => {
           smooth={true}
           offset={-100}
           duration={500}
-          className="block py-3 text-sm font-thin text-center md:text-sm lg:text-lg cursor-pointer border-r border-black"
+          className="block py-3 text-sm text-center md:text-sm lg:text-lg cursor-pointer border-r border-black"
         >
           1st Section
         </Link>
@@ -22,7 +22,7 @@ const NavLinkList = () => {
           smooth={true}
           offset={-100}
           duration={500}
-          className="block py-3 text-sm font-thin text-center md:text-sm lg:text-lg cursor-pointer"
+          className="block py-3 text-sm text-center md:text-sm lg:text-lg cursor-pointer"
         >
           2nd Section
         </Link>

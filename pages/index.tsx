@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next';
 import { NewsArticle, NewsResponse } from '@/models/NewsArticles';
 import Hero from '@/components/Hero';
 import News from '@/components/News/News';
+import MainArticle from '@/components/MainArticle';
 
 interface HomePageProps {
   articles: NewsArticle[];
@@ -23,6 +24,7 @@ export default function Home({ articles }: HomePageProps) {
   return (
     <main>
       <Hero />
+      <MainArticle article={articles[0]} />
       <News articles={articles} />
     </main>
   );
