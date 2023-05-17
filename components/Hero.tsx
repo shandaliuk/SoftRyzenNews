@@ -30,6 +30,7 @@ const Hero = () => {
             alt="Newspapers"
             width={1280}
             height={920}
+            priority
             sizes="(min-width: 320px) 80vw, (min-width: 480px) 80vw, (min-width: 768px) 80vw, 33vw"
             className="mx-auto object border border-black"
           />

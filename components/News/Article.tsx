@@ -8,7 +8,7 @@ interface BigArticleComponentProps {
 
 const Article = ({ article }: BigArticleComponentProps) => {
   return (
-    <article className="bg-zinc-200 py-8 md:w-[340px] md:h-[470px] xl:w-[390px] border border-black">
+    <article className="bg-zinc-200 py-8 md:w-[340px] md:h-[510px] xl:w-[390px] border border-black">
       <div className="border-b border-black px-8 pb-4">
         <Image
           src={

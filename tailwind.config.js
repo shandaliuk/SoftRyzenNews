@@ -20,6 +20,7 @@ module.exports = {
       },
       boxShadow: {
         strict: '6px 6px 0px 0px',
+        strictMini: '3px 3px 0px 0px',
       },
     },
   },

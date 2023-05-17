@@ -8,7 +8,7 @@ const NavLinkList = () => {
           to="main"
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={-110}
           duration={500}
           className="block py-3 uppercase text-[16px] text-center md:text-[20px] xl:text-[30px] cursor-pointer border-r border-black"
         >
@@ -20,7 +20,7 @@ const NavLinkList = () => {
           to="news"
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={-110}
           duration={500}
           className="block py-3 text-[16px] text-center md:text-[20px] xl:text-[30px] cursor-pointer"
         >

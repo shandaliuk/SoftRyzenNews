@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 import Container from './Container';
+import Check from '../public/icons/check.svg';
 
 interface FormValues {
   name: string;
@@ -12,11 +14,15 @@ interface FormValues {
 const ContactsForm = () => {
   const form = useForm<FormValues>();
 
-  const { register, control, handleSubmit, formState, reset } = form;
+  const { register, control, handleSubmit, formState, reset, getValues } = form;
+
+  const [isCheckboxActive, setCheckboxActivity] = useState(() => {
+    return getValues('agreement');
+  });
 
   const { errors } = formState;
 
-  console.log(errors);
+  const handleCheckboxClick = () => setCheckboxActivity(state => !state);
 
   const onSubmit = (data: FormValues) => {
     console.log(data);
@@ -115,7 +121,7 @@ const ContactsForm = () => {
             ) : null}
           </div>
 
-          <div className="relative pb-8">
+          <div className="relative pb-8 flex flex-col items-center gap-1">
             <label
               htmlFor="agreement"
               className="block text-center uppercase text-sm md:text-lg xl:text-2xl"
@@ -128,15 +134,23 @@ const ContactsForm = () => {
               {...register('agreement', {
                 required: 'Please agree with the rules.',
               })}
-              className="block mx-auto mt-3 w-5 h-5"
+              className="none"
+              onClick={handleCheckboxClick}
             />
+            <div
+              className={`${isCheckboxActive ? 'bg-main' : 'bg-white'} ${
+                errors.agreement ? 'border-red-400' : 'border-black'
+              } inline-flex items-center justify-center w-5 h-5 border cursor-pointer shadow-strictMini`}
+              onClick={handleCheckboxClick}
+            >
+              {isCheckboxActive ? <Check className="w-full h-full" /> : null}
+            </div>
             {errors.agreement ? (
               <p className="text-red-400 text-center absolute bottom-1 text-sm w-full right-2/4 translate-x-2/4">
                 {errors.agreement.message}
               </p>
             ) : null}
           </div>
-
           <button
             type="submit"
             className="block mx-auto py-3 px-5 bg-main md:text-lg text-centersm:w-3/6 lg:w-2/5 xl:text-2xl  border border-black"
