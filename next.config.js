@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'ichef.bbci.co.uk',
+        hostname: '**.bbci.co.uk',
       },
     ],
   },

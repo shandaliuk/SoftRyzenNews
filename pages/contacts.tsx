@@ -4,14 +4,16 @@ import ContactsForm from '@/components/ContactsForm';
 const Contacts = () => {
   return (
     <main>
-      <Container>
-        <section className="pt-20">
-          <h2 className="font-extrabold text-2xl text-center text-orange-950">
-            Sing up to our newsletters!
-          </h2>
-          <ContactsForm />
-        </section>
-      </Container>
+      <section className="pt-[110px] md:pt-[120px] xl:pt-[140px]">
+        <div className="border-b border-black pb-4">
+          <Container>
+            <h2 className="font-black uppercase text-5xl sm:text-6xl md:text-8xl xl:text-9xl text-center">
+              Sing up to our newsletters!
+            </h2>
+          </Container>
+        </div>
+        <ContactsForm />
+      </section>
     </main>
   );
 };

@@ -5,14 +5,14 @@ const NavLinkList = () => {
     <ul className="flex">
       <li className="w-3/6">
         <Link
-          to="hero"
+          to="main"
           spy={true}
           smooth={true}
           offset={-100}
           duration={500}
-          className="block py-3 text-sm text-center md:text-sm lg:text-lg cursor-pointer border-r border-black"
+          className="block py-3 uppercase text-[16px] text-center md:text-[20px] xl:text-[30px] cursor-pointer border-r border-black"
         >
-          1st Section
+          TRENDING
         </Link>
       </li>
       <li className="w-3/6">
@@ -22,9 +22,9 @@ const NavLinkList = () => {
           smooth={true}
           offset={-100}
           duration={500}
-          className="block py-3 text-sm text-center md:text-sm lg:text-lg cursor-pointer"
+          className="block py-3 text-[16px] text-center md:text-[20px] xl:text-[30px] cursor-pointer"
         >
-          2nd Section
+          NEWS
         </Link>
       </li>
     </ul>
