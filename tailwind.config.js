@@ -15,6 +15,9 @@ module.exports = {
       screens: {
         sm: '480px',
       },
+      colors: {
+        main: '#E2D28C',
+      },
     },
   },
   plugins: [],

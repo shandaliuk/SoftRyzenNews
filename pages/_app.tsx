@@ -1,14 +1,14 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { Mulish } from 'next/font/google';
+import { Playfair_Display } from 'next/font/google';
 import Header from '@/components/Header/Header';
 
-const mulish = Mulish({ subsets: ['latin'] });
+const payfair = Playfair_Display({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={mulish.className}>
+    <div className={payfair.className + ' bg-main text-black'}>
       <Head>
         <title key="title">SoftRyzenNews</title>
         <meta

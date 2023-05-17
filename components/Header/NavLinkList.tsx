@@ -2,29 +2,29 @@ import { Link } from 'react-scroll';
 
 const NavLinkList = () => {
   return (
-    <ul className="flex gap-10">
-      <li>
+    <ul className="flex">
+      <li className="w-3/6">
         <Link
           to="hero"
           spy={true}
           smooth={true}
           offset={-100}
           duration={500}
-          className="text-xs text-amber-200 uppercase font-bold md:text-sm lg:text-lg cursor-pointer"
+          className="block py-3 text-sm font-thin text-center md:text-sm lg:text-lg cursor-pointer border-r border-black"
         >
-          1st <span className="hidden sm:inline-block">Section</span>
+          1st Section
         </Link>
       </li>
-      <li>
+      <li className="w-3/6">
         <Link
           to="news"
           spy={true}
           smooth={true}
           offset={-100}
           duration={500}
-          className="text-xs text-amber-200 uppercase font-bold md:text-sm lg:text-lg cursor-pointer"
+          className="block py-3 text-sm font-thin text-center md:text-sm lg:text-lg cursor-pointer"
         >
-          2nd <span className="hidden sm:inline-block">Section</span>
+          2nd Section
         </Link>
       </li>
     </ul>
