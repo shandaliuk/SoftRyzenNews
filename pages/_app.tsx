@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={oswald.className + ' bg-main text-black'}>
       <Head>
-        <title key="title">SoftRyzenNews</title>
+        <title key="title">SOFTRYZENNEWS</title>
         <meta
           name="description"
           key="description"
