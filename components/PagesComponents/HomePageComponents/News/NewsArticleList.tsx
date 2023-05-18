@@ -1,4 +1,4 @@
-import { NewsArticle } from '@/models/NewsArticles';
+import { NewsArticle } from '@/interfaces/NewsArticles';
 import Article from './Article';
 
 interface NewsArticleListProps {

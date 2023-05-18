@@ -1,8 +1,8 @@
 import { GetServerSideProps } from 'next';
-import { NewsArticle, NewsResponse } from '@/models/NewsArticles';
-import Hero from '@/components/Hero';
-import News from '@/components/News/News';
-import MainArticle from '@/components/MainArticle';
+import { NewsArticle, NewsResponse } from '@/interfaces/NewsArticles';
+import Hero from '@/components/PagesComponents/HomePageComponents/Hero';
+import News from '@/components/PagesComponents/HomePageComponents/News/News';
+import MainArticle from '@/components/PagesComponents/HomePageComponents/MainArticle';
 
 interface HomePageProps {
   articles: NewsArticle[];

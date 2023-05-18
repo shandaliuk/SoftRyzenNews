@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { normalizeDate } from '@/helpers/normalizeDate';
-import { NewsArticle } from '@/models/NewsArticles';
-import Container from './Container';
+import { NewsArticle } from '@/interfaces/NewsArticles';
+import Container from '@/components/SharedComponents/Container';
 
 interface MainArticleProps {
   article: NewsArticle;

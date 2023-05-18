@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Container from '@/components/Container';
-import ContactsForm from '@/components/ContactsForm';
+import Container from '@/components/SharedComponents/Container';
+import ContactsForm from '@/components/PagesComponents/ContactsPageComponents/ContactsForm';
 
 const Contacts = () => {
   return (
@@ -10,10 +10,8 @@ const Contacts = () => {
         <meta
           name="description"
           key="description"
-          content="SoftRyzenNews homepage"
+          content="SoftRyzenNews subscribe page"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         <section className="pt-[110px] md:pt-[120px] xl:pt-[140px]">

@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Toaster, toast } from 'react-hot-toast';
-import { DevTool } from '@hookform/devtools';
-import Container from './Container';
+import Container from '@/components/SharedComponents/Container';
 import SignUpNotification from './SignUpNotification';
-import Check from '../public/icons/check.svg';
+import Check from '@/assets/icons/check.svg';
 
 interface FormValues {
   name: string;
@@ -22,15 +21,8 @@ const ContactsForm = () => {
     },
   });
 
-  const {
-    register,
-    control,
-    handleSubmit,
-    formState,
-    reset,
-    setValue,
-    getValues,
-  } = form;
+  const { register, handleSubmit, formState, reset, setValue, getValues } =
+    form;
 
   const handleCheckboxClick = () => {
     setCheckboxCheck(state => !state);
@@ -41,9 +33,7 @@ const ContactsForm = () => {
   const { errors } = formState;
 
   const onSubmit = (data: FormValues) => {
-    toast.custom(t => (
-      <SignUpNotification name={data.name} visibility={t.visible} />
-    ));
+    toast.custom(() => <SignUpNotification name={data.name} />);
     console.log(data);
     setCheckboxCheck(false);
     reset();
@@ -180,7 +170,6 @@ const ContactsForm = () => {
             Submit
           </button>
         </form>
-        <DevTool control={control} />
       </Container>
     </div>
   );

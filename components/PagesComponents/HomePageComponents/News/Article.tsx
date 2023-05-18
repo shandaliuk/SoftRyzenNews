@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { NewsArticle } from '@/models/NewsArticles';
+import { NewsArticle } from '@/interfaces/NewsArticles';
 import { normalizeDate } from '@/helpers/normalizeDate';
 
 interface BigArticleComponentProps {

@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Container from './Container';
-import image from '../public/images/news.jpg';
+import Container from '@/components/SharedComponents/Container';
+import image from '@/assets/images/news.jpg';
 
 const Hero = () => {
   return (

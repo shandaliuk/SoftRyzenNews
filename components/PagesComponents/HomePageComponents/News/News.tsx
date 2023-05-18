@@ -1,7 +1,7 @@
-import { NewsArticle } from '@/models/NewsArticles';
-import Container from '../Container';
+import { NewsArticle } from '@/interfaces/NewsArticles';
+import Container from '@/components/SharedComponents/Container';
 import NewsArticleList from './NewsArticleList';
-import SignUp from '../SignUp';
+import SignUp from './SignUp';
 
 interface NewsComponentProps {
   articles: NewsArticle[];

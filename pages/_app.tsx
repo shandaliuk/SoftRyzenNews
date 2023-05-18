@@ -2,8 +2,8 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Oswald } from 'next/font/google';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/SharedComponents/Header/Header';
+import Footer from '@/components/SharedComponents/Footer';
 
 const oswald = Oswald({ subsets: ['latin'] });
 
