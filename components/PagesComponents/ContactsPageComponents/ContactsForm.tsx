@@ -45,12 +45,12 @@ const ContactsForm = () => {
       <Container>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="border border-black bg-zinc-200 py-6"
+          className="py-6 border border-black bg-zinc-200"
         >
           <div className="relative pb-8">
             <label
               htmlFor="name"
-              className="block text-center uppercase text-sm md:text-lg xl:text-2xl"
+              className="block text-sm text-center uppercase md:text-lg xl:text-2xl"
             >
               Name
             </label>
@@ -69,7 +69,7 @@ const ContactsForm = () => {
               } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.name ? (
-              <p className="text-red-400 text-center absolute bottom-1 right-2/4 translate-x-2/4 text-sm">
+              <p className="absolute text-sm text-center text-red-400 bottom-1 right-2/4 translate-x-2/4">
                 {errors.name.message}
               </p>
             ) : null}
@@ -78,7 +78,7 @@ const ContactsForm = () => {
           <div className="relative pb-8">
             <label
               htmlFor="phone"
-              className="block text-center uppercase text-sm md:text-lg xl:text-2xl"
+              className="block text-sm text-center uppercase md:text-lg xl:text-2xl"
             >
               Phone
             </label>
@@ -98,7 +98,7 @@ const ContactsForm = () => {
               } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.phone ? (
-              <p className="text-red-400 text-center absolute bottom-1 text-sm w-full right-2/4 translate-x-2/4">
+              <p className="absolute w-full text-sm text-center text-red-400 bottom-1 right-2/4 translate-x-2/4">
                 {errors.phone.message}
               </p>
             ) : null}
@@ -107,7 +107,7 @@ const ContactsForm = () => {
           <div className="relative pb-8">
             <label
               htmlFor="email"
-              className="block text-center uppercase text-sm md:text-lg xl:text-2xl"
+              className="block text-sm text-center uppercase md:text-lg xl:text-2xl"
             >
               E-mail
             </label>
@@ -126,16 +126,16 @@ const ContactsForm = () => {
               } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.email ? (
-              <p className="text-red-400 text-center absolute bottom-1 text-sm w-full right-2/4 translate-x-2/4">
+              <p className="absolute w-full text-sm text-center text-red-400 bottom-1 right-2/4 translate-x-2/4">
                 {errors.email.message}
               </p>
             ) : null}
           </div>
 
-          <div className="relative pb-8 flex flex-col items-center gap-1">
+          <div className="relative flex flex-col items-center gap-1 pb-8">
             <label
               htmlFor="agreement"
-              className="block text-center uppercase text-sm md:text-lg xl:text-2xl"
+              className="block text-sm text-center uppercase md:text-lg xl:text-2xl"
             >
               Do you agree to recieve newsletters from our company?
             </label>
@@ -158,14 +158,14 @@ const ContactsForm = () => {
               {isCheckboxChecked ? <Check className="w-full h-full" /> : null}
             </button>
             {errors.agreement ? (
-              <p className="text-red-400 text-center absolute bottom-1 text-sm w-full right-2/4 translate-x-2/4">
+              <p className="absolute w-full text-sm text-center text-red-400 bottom-1 right-2/4 translate-x-2/4">
                 {errors.agreement.message}
               </p>
             ) : null}
           </div>
           <button
             type="submit"
-            className="block mx-auto py-3 px-5 bg-main uppercase md:text-lg text-centersm:w-3/6 lg:w-1/5 xl:text-2xl  border border-black shadow-strict focus:bg-accent hover:bg-accent transition-color duration-300"
+            className="block px-5 py-3 mx-auto uppercase duration-300 border border-black bg-main md:text-lg text-centersm:w-3/6 lg:w-1/5 xl:text-2xl shadow-strict focus:bg-accent hover:bg-accent transition-color"
           >
             Submit
           </button>

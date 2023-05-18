@@ -23,7 +23,7 @@ const Hero = () => {
           </h2>
         </Container>
       </div>
-      <div className="relative border-b border-black pt-4 pb-6">
+      <div className="relative pt-4 pb-6 border-b border-black">
         <Container>
           <Image
             src={image}
@@ -32,11 +32,11 @@ const Hero = () => {
             height={920}
             priority
             sizes="(min-width: 320px) 80vw, (min-width: 480px) 80vw, (min-width: 768px) 80vw, 33vw"
-            className="mx-auto object border border-black"
+            className="mx-auto border border-black object"
           />
         </Container>
         <Container>
-          <p className="bg-zinc-200 absolute bottom-2 right-2/4 translate-x-2/4 text-xs text-center md:text-sm lg:text-xl border border-black w-3/6">
+          <p className="absolute w-3/6 text-xs text-center border border-black bg-zinc-200 bottom-2 right-2/4 translate-x-2/4 md:text-sm lg:text-xl">
             SoftRyzenNews is a prominent and innovative news resource agency
             that delivers reliable and cutting-edge information to its readers.
           </p>

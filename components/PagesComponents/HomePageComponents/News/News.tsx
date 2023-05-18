@@ -17,7 +17,7 @@ const News = ({ articles }: NewsComponentProps) => {
           </h2>
         </Container>
       </div>
-      <div className="border-b border-black pb-4">
+      <div className="pb-4 border-b border-black">
         <Container>
           <NewsArticleList articles={articles} />
         </Container>

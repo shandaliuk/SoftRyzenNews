@@ -4,7 +4,7 @@ interface SignUpNotificationProps {
 
 const SignUpNotification = ({ name }: SignUpNotificationProps) => {
   return (
-    <div className="bg-zinc-200 px-6 py-4 shadow-md border border-black animate-bounce">
+    <div className="px-6 py-4 border border-black shadow-md bg-zinc-200 animate-bounce">
       <span className="uppercase">{`${name} successfully subscribed`}</span>
     </div>
   );

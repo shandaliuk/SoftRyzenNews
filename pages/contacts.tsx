@@ -15,9 +15,9 @@ const Contacts = () => {
       </Head>
       <main>
         <section className="pt-[110px] md:pt-[120px] xl:pt-[140px]">
-          <div className="border-b border-black pb-4">
+          <div className="pb-4 border-b border-black">
             <Container>
-              <h2 className="font-black uppercase text-5xl sm:text-6xl md:text-8xl xl:text-9xl text-center">
+              <h2 className="text-5xl font-black text-center uppercase sm:text-6xl md:text-8xl xl:text-9xl">
                 Sing up to our newsletters!
               </h2>
             </Container>

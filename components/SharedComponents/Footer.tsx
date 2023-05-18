@@ -1,12 +1,12 @@
 const Footer = () => {
   return (
     <footer className="p-4">
-      <p className="uppercase text-xl text-center">
+      <p className="text-xl text-center uppercase">
         Created by{' '}
         <a
           href="https://github.com/shandaliuk"
           target="_blank"
-          className="text-emerald-600 focus:bg-accent hover:text-violet-600 transition-color duration-300"
+          className="duration-300 text-emerald-600 focus:bg-accent hover:text-violet-600 transition-color"
         >
           shandaliuk
         </a>
