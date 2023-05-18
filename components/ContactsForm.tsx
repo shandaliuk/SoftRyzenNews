@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { Toaster, toast } from 'react-hot-toast';
 import { DevTool } from '@hookform/devtools';
 import Container from './Container';
+import SignUpNotification from './SignUpNotification';
 import Check from '../public/icons/check.svg';
 
 interface FormValues {
@@ -12,26 +14,44 @@ interface FormValues {
 }
 
 const ContactsForm = () => {
-  const form = useForm<FormValues>();
+  const [isCheckboxChecked, setCheckboxCheck] = useState(false);
 
-  const { register, control, handleSubmit, formState, reset, setValue } = form;
+  const form = useForm<FormValues>({
+    defaultValues: {
+      agreement: false,
+    },
+  });
 
-  const [isCheckboxActive, setCheckboxActivity] = useState(false);
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState,
+    reset,
+    setValue,
+    getValues,
+  } = form;
+
+  const handleCheckboxClick = () => {
+    setCheckboxCheck(state => !state);
+    const value = getValues('agreement');
+    setValue('agreement', !value);
+  };
 
   const { errors } = formState;
 
-  const handleCheckboxClick = () => {
-    setCheckboxActivity(state => !state);
-    setValue('agreement', isCheckboxActive);
-  };
-
   const onSubmit = (data: FormValues) => {
+    toast.custom(t => (
+      <SignUpNotification name={data.name} visibility={t.visible} />
+    ));
     console.log(data);
+    setCheckboxCheck(false);
     reset();
   };
 
   return (
     <div className="pt-8 pb-8 border-b border-black">
+      <Toaster />
       <Container>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -140,12 +160,12 @@ const ContactsForm = () => {
             />
             <button
               type="button"
-              className={`${isCheckboxActive ? 'bg-main' : 'bg-white'} ${
+              className={`${isCheckboxChecked ? 'bg-main' : 'bg-white'} ${
                 errors.agreement ? 'border-red-400' : 'border-black'
               } inline-flex items-center justify-center w-5 h-5 border cursor-pointer shadow-strictMini focus:bg-accent transition-color duration-300`}
               onClick={handleCheckboxClick}
             >
-              {isCheckboxActive ? <Check className="w-full h-full" /> : null}
+              {isCheckboxChecked ? <Check className="w-full h-full" /> : null}
             </button>
             {errors.agreement ? (
               <p className="text-red-400 text-center absolute bottom-1 text-sm w-full right-2/4 translate-x-2/4">

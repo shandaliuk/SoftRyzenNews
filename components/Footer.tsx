@@ -5,6 +5,7 @@ const Footer = () => {
         Created by{' '}
         <a
           href="https://github.com/shandaliuk"
+          target="_blank"
           className="text-emerald-600 focus:bg-accent hover:text-violet-600 transition-color duration-300"
         >
           shandaliuk
