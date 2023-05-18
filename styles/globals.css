@@ -6,3 +6,18 @@ input {
   appearance: none;
   border-radius: 0;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d1d4;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+}
