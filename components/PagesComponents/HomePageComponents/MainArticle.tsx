@@ -33,7 +33,7 @@ const MainArticle = ({ article }: MainArticleProps) => {
         </Container>
       </div>
       <Container>
-        <div className="flex flex-col items-center py-2 border border-black bg-zinc-200">
+        <div className="flex flex-col items-center p-2 border border-black bg-zinc-200">
           <h3 className="text-4xl font-black text-center uppercase">
             {article.title}
           </h3>

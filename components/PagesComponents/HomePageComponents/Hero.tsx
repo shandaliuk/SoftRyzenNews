@@ -36,7 +36,7 @@ const Hero = () => {
           />
         </Container>
         <Container>
-          <p className="absolute w-3/6 text-xs text-center border border-black bg-zinc-200 bottom-2 right-2/4 translate-x-2/4 md:text-sm lg:text-xl">
+          <p className="absolute w-3/6 p-1 text-xs text-center border border-black bg-zinc-200 bottom-2 right-2/4 translate-x-2/4 md:text-sm lg:text-xl">
             SoftRyzenNews is a prominent and innovative news resource agency
             that delivers reliable and cutting-edge information to its readers.
           </p>

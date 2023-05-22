@@ -66,7 +66,7 @@ const ContactsForm = () => {
               })}
               className={`block border ${
                 errors.name ? 'border-red-400' : 'border-black'
-              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
+              } mt-2 w-5/6 px-2 py-1 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.name ? (
               <p className="absolute text-sm text-center text-red-400 bottom-1 right-2/4 translate-x-2/4">
@@ -95,7 +95,7 @@ const ContactsForm = () => {
               })}
               className={`block border ${
                 errors.phone ? 'border-red-400' : 'border-black'
-              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
+              } mt-2 w-5/6 px-2 py-1 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.phone ? (
               <p className="absolute w-full text-sm text-center text-red-400 bottom-1 right-2/4 translate-x-2/4">
@@ -123,7 +123,7 @@ const ContactsForm = () => {
               })}
               className={`block border ${
                 errors.email ? 'border-red-400' : 'border-black'
-              } mt-2 w-5/6 mx-auto sm:w-4/6 md:w-3/6 xl:w-2/6 md:p-[3px] shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
+              } mt-2 w-5/6 mx-auto px-2 py-1 sm:w-4/6 md:w-3/6 xl:w-2/6 shadow-strict focus:bg-accent focus-within:bg-accent transition-color duration-300`}
             />
             {errors.email ? (
               <p className="absolute w-full text-sm text-center text-red-400 bottom-1 right-2/4 translate-x-2/4">
