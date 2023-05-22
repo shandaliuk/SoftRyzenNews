@@ -1,4 +1,4 @@
-import { NewsArticle } from '@/interfaces/NewsArticles';
+import { NewsArticle } from '@/components/PagesComponents/HomePageComponents/NewsArticles';
 import Container from '@/components/SharedComponents/Container';
 import NewsArticleList from './NewsArticleList';
 import SignUp from './SignUp';

@@ -1,5 +1,6 @@
+import ContactsForm from './Form/ContactsForm';
+
 import Container from '@/components/SharedComponents/Container';
-import ContactsForm from './ContactsForm/ContactsForm';
 
 const SignUp = () => {
   return (

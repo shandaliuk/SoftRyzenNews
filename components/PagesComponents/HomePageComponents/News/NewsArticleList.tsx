@@ -1,4 +1,4 @@
-import { NewsArticle } from '@/interfaces/NewsArticles';
+import { NewsArticle } from '@/components/PagesComponents/HomePageComponents/NewsArticles';
 import Article from './Article';
 
 interface NewsArticleListProps {

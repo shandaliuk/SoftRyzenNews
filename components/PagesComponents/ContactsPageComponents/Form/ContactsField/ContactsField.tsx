@@ -1,19 +1,8 @@
-import { FieldErrors, UseFormRegister, Path } from 'react-hook-form';
-import { FormValues } from './ContactsForm';
-
-interface ContactsFieldProps {
-  setup: {
-    register: UseFormRegister<FormValues>;
-    fieldName: Path<FormValues>;
-    type: string;
-    regExp: RegExp;
-    errors: FieldErrors<FormValues>;
-  };
-}
+import { ContactsFieldInterface } from './ContactsFieldInterface';
 
 const ContactsField = ({
   setup: { register, fieldName, regExp, type, errors },
-}: ContactsFieldProps) => {
+}: ContactsFieldInterface) => {
   return (
     <div className="relative mb-8">
       <label className="block text-sm text-center uppercase md:text-lg xl:text-2xl">

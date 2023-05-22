@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { normalizeDate } from '@/helpers/normalizeDate';
-import { NewsArticle } from '@/interfaces/NewsArticles';
+import { NewsArticle } from '@/components/PagesComponents/HomePageComponents/NewsArticles';
 import Container from '@/components/SharedComponents/Container';
 
 interface MainArticleProps {

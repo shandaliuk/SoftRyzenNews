@@ -1,17 +1,6 @@
-import { FieldErrors, Path, UseFormRegister } from 'react-hook-form';
-import Check from '@/assets/icons/check.svg';
-import { FormValues } from './ContactsForm';
+import { ContactsCheckboxInterface } from './ContactsCheckboxInterface';
 
-interface ContactsCheckboxProps {
-  setup: {
-    register: UseFormRegister<FormValues>;
-    fieldName: Path<FormValues>;
-    title: string;
-    errors: FieldErrors<FormValues>;
-    isCheckboxChecked: boolean;
-    handleCheckboxClick: () => void;
-  };
-}
+import Check from '@/assets/icons/check.svg';
 
 const ContactsCheckbox = ({
   setup: {
@@ -22,7 +11,7 @@ const ContactsCheckbox = ({
     isCheckboxChecked,
     handleCheckboxClick,
   },
-}: ContactsCheckboxProps) => {
+}: ContactsCheckboxInterface) => {
   return (
     <div className="relative flex flex-col items-center gap-1 mb-8">
       <label className="block text-sm text-center uppercase md:text-lg xl:text-2xl">

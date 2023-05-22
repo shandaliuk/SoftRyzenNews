@@ -1,6 +1,8 @@
-import Logo from '../Logo';
-import Container from '../Container';
 import NavLinkList from './NavLinkList';
+
+import Logo from '../Logo';
+
+import Container from '../Container';
 
 const Header = () => {
   return (
