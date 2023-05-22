@@ -1,4 +1,4 @@
-import NavLinkList from './NavLinkList';
+import HeaderNavigation from './HeaderNavigation';
 
 import Logo from '../Logo';
 
@@ -12,11 +12,7 @@ const Header = () => {
           <Logo />
         </Container>
       </div>
-      <div className="border-b border-black">
-        <nav>
-          <NavLinkList />
-        </nav>
-      </div>
+      <HeaderNavigation />
     </header>
   );
 };
