@@ -1,12 +1,9 @@
 import Image from 'next/image';
-import { NewsArticle } from '@/components/PagesComponents/HomePageComponents/NewsArticles';
+
 import { normalizeDate } from '@/helpers/normalizeDate';
+import { ArticleInterface } from './ArticleInterface';
 
-interface BigArticleComponentProps {
-  article: NewsArticle;
-}
-
-const Article = ({ article }: BigArticleComponentProps) => {
+const Article = ({ article }: ArticleInterface) => {
   return (
     <article className="bg-zinc-200 py-8 md:w-[340px] md:h-[510px] xl:w-[390px] border border-black">
       <div className="px-8 mb-4">

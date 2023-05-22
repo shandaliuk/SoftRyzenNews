@@ -1,13 +1,11 @@
-import { NewsArticle } from '@/components/PagesComponents/HomePageComponents/NewsArticles';
+import { NewsInterface } from './NewsInterface';
+
+import NewsArticleList from '../NewsArticleList/NewsArticleList';
+import SignUp from '../SignUp';
+
 import Container from '@/components/SharedComponents/Container';
-import NewsArticleList from './NewsArticleList';
-import SignUp from './SignUp';
 
-interface NewsComponentProps {
-  articles: NewsArticle[];
-}
-
-const News = ({ articles }: NewsComponentProps) => {
+const News = ({ articles }: NewsInterface) => {
   return (
     <section id="news">
       <div className="mb-4 border-t border-b border-black bg-zinc-200">

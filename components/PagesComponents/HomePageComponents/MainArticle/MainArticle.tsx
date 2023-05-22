@@ -1,13 +1,11 @@
 import Image from 'next/image';
+
 import { normalizeDate } from '@/helpers/normalizeDate';
-import { NewsArticle } from '@/components/PagesComponents/HomePageComponents/NewsArticles';
+import { MainArticleInterface } from './MainArticleInterface';
+
 import Container from '@/components/SharedComponents/Container';
 
-interface MainArticleProps {
-  article: NewsArticle;
-}
-
-const MainArticle = ({ article }: MainArticleProps) => {
+const MainArticle = ({ article }: MainArticleInterface) => {
   return (
     <section className="mb-6" id="main">
       <div className="mb-4 border-t border-b border-black bg-zinc-200">

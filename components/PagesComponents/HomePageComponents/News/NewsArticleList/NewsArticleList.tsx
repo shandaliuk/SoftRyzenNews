@@ -1,11 +1,8 @@
-import { NewsArticle } from '@/components/PagesComponents/HomePageComponents/NewsArticles';
-import Article from './Article';
+import { NewsArticleListInterface } from './NewsArticleListInterface';
 
-interface NewsArticleListProps {
-  articles: NewsArticle[];
-}
+import Article from '../Article/Article';
 
-const NewsArticleList = ({ articles }: NewsArticleListProps) => {
+const NewsArticleList = ({ articles }: NewsArticleListInterface) => {
   return (
     <ul className="flex flex-col flex-wrap justify-between gap-4 md:flex-row">
       {...articles.slice(1, 9).map(article => (
