@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import SignUp from '@/components/PagesComponents/ContactsPageComponents/SignUp';
 
 const Contacts = () => {

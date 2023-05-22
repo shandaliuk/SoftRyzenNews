@@ -1,8 +1,7 @@
 import { GetServerSideProps } from 'next';
-import {
-  NewsArticle,
-  NewsResponse,
-} from '@/components/PagesComponents/HomePageComponents/ContactsInterfaces';
+
+import { NewsArticle, NewsResponse } from '@/interfaces/NewsInterfaces';
+
 import Hero from '@/components/PagesComponents/HomePageComponents/Hero';
 import News from '@/components/PagesComponents/HomePageComponents/News/NewsComponent/News';
 import MainArticle from '@/components/PagesComponents/HomePageComponents/MainArticle/MainArticle';

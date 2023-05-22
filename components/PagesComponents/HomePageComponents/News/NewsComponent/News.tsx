@@ -1,11 +1,11 @@
-import { NewsInterface } from './NewsInterface';
+import { NewsComponentInterface } from './NewsComponentInterface';
 
 import NewsArticleList from '../NewsArticleList/NewsArticleList';
 import SignUp from '../SignUp';
 
 import Container from '@/components/SharedComponents/Container';
 
-const News = ({ articles }: NewsInterface) => {
+const News = ({ articles }: NewsComponentInterface) => {
   return (
     <section id="news">
       <div className="mb-4 border-t border-b border-black bg-zinc-200">

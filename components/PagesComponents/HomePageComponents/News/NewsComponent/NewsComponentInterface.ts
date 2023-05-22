@@ -1,5 +1,5 @@
 import { NewsArticle } from '@/interfaces/NewsInterfaces';
 
-export interface NewsArticleListInterface {
+export interface NewsComponentInterface {
   articles: NewsArticle[];
 }
