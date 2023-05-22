@@ -10,14 +10,14 @@ interface NewsComponentProps {
 const News = ({ articles }: NewsComponentProps) => {
   return (
     <section id="news">
-      <div className="border-b border-black bg-zinc-200">
+      <div className="mb-4 border-t border-b border-black bg-zinc-200">
         <Container>
           <h2 className="text-[30px] md:text-[40px] lg:text-[60px] font-black uppercase text-center">
             Latest News
           </h2>
         </Container>
       </div>
-      <div className="pb-4 border-b border-black">
+      <div className="mb-4">
         <Container>
           <NewsArticleList articles={articles} />
         </Container>

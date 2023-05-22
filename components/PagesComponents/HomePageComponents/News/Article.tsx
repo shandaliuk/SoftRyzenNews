@@ -9,7 +9,7 @@ interface BigArticleComponentProps {
 const Article = ({ article }: BigArticleComponentProps) => {
   return (
     <article className="bg-zinc-200 py-8 md:w-[340px] md:h-[510px] xl:w-[390px] border border-black">
-      <div className="px-8 pb-4 border-b border-black">
+      <div className="px-8 mb-4">
         <Image
           src={
             article.urlToImage
@@ -22,9 +22,9 @@ const Article = ({ article }: BigArticleComponentProps) => {
           className="mx-auto border border-black"
         />
       </div>
-      <div className="px-8 pt-2">
-        <h3 className="text-2xl font-extrabold">{article.title}</h3>
-        <div className="flex gap-2 mt-2 mb-2">
+      <div className="px-8 pt-2 border-t border-black">
+        <h3 className="mb-2 text-2xl font-extrabold">{article.title}</h3>
+        <div className="flex gap-2 mb-2">
           <p className="text-xs">{article.author}</p>
           <p className="text-xs">
             {normalizeDate(new Date(article.publishedAt))}

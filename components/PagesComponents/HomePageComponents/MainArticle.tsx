@@ -9,15 +9,15 @@ interface MainArticleProps {
 
 const MainArticle = ({ article }: MainArticleProps) => {
   return (
-    <section className="pb-4 border-b border-black" id="main">
-      <div className="border-b border-black bg-zinc-200">
+    <section className="mb-6" id="main">
+      <div className="mb-4 border-t border-b border-black bg-zinc-200">
         <Container>
           <h2 className="text-[30px] md:text-[40px] lg:text-[60px] font-black uppercase text-center">
             Trending
           </h2>
         </Container>
       </div>
-      <div className="py-4">
+      <div className="mb-4">
         <Container>
           <Image
             src={
@@ -34,10 +34,10 @@ const MainArticle = ({ article }: MainArticleProps) => {
       </div>
       <Container>
         <div className="flex flex-col items-center p-2 border border-black bg-zinc-200">
-          <h3 className="text-4xl font-black text-center uppercase">
+          <h3 className="mb-2 text-4xl font-black text-center uppercase">
             {article.title}
           </h3>
-          <div className="flex gap-2 mt-2 mb-2">
+          <div className="flex gap-2 mb-2">
             <p className="text-xs">{article.author}</p>
             <p className="text-xs">
               {normalizeDate(new Date(article.publishedAt))}

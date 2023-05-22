@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const SignUp = () => {
   return (
-    <div className="flex flex-col gap-4 p-8 border-b border-black md:flex-row md:items-center">
+    <div className="flex flex-col gap-4 p-8 pb-0 mb-8 border-t border-black md:flex-row md:items-center">
       <h4 className="text-3xl font-black uppercase lg:text-5xl">
         Sign Up for Our Newsletters
       </h4>

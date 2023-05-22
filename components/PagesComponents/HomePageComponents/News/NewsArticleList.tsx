@@ -7,7 +7,7 @@ interface NewsArticleListProps {
 
 const NewsArticleList = ({ articles }: NewsArticleListProps) => {
   return (
-    <ul className="flex flex-col flex-wrap justify-between gap-4 pt-2 pb-4 md:flex-row">
+    <ul className="flex flex-col flex-wrap justify-between gap-4 md:flex-row">
       {...articles.slice(1, 9).map(article => (
         <li key={article.url}>
           <Article article={article} />
