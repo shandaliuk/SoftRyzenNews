@@ -4,7 +4,7 @@ import { Toaster, toast } from 'react-hot-toast';
 
 import { FormValues } from './FormValues';
 
-import SignUpNotification from '../SignUpNotification';
+import SignUpNotification from '../SignUpNotification/SignUpNotification';
 import ContactsField from './ContactsField/ContactsField';
 import ContactsCheckbox from './ContactsCheckbox/ContactsCheckbox';
 
