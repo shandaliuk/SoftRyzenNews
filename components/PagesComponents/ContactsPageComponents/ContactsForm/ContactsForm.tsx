@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Toaster, toast } from 'react-hot-toast';
 import Container from '@/components/SharedComponents/Container';
-import SignUpNotification from './SignUpNotification';
+import SignUpNotification from '../SignUpNotification';
 import ContactsField from './ContactsField';
 import ContactsCheckbox from './ContactsCheckbox';
 
