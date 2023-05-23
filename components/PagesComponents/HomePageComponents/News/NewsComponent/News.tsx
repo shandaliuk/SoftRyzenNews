@@ -1,7 +1,7 @@
 import { NewsComponentInterface } from './NewsComponentInterface';
 
 import NewsArticleList from '../NewsArticleList/NewsArticleList';
-import SignUp from '../SignUp';
+import SignUp from '../SignUp/SignUp';
 
 import Container from '@/components/SharedComponents/Container';
 
