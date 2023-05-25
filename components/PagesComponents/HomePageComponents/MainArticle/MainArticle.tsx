@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { normalizeDate } from '@/helpers/normalizeDate';
@@ -6,6 +7,12 @@ import { MainArticleInterface } from './MainArticleInterface';
 import Container from '@/components/SharedComponents/Container';
 
 const MainArticle = ({ article }: MainArticleInterface) => {
+  const [formattedDate, setFormattedDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    setFormattedDate(normalizeDate(new Date(article.publishedAt)));
+  }, [article.publishedAt]);
+
   return (
     <section className="mb-6" id="main">
       <div className="mb-4 border-t border-b border-black bg-zinc-200">
@@ -37,9 +44,7 @@ const MainArticle = ({ article }: MainArticleInterface) => {
           </h3>
           <div className="flex gap-2 mb-2">
             <p className="text-xs">{article.author}</p>
-            <p className="text-xs">
-              {normalizeDate(new Date(article.publishedAt))}
-            </p>
+            <p className="text-xs">{formattedDate}</p>
           </div>
           <p className="text-center">{article.content.slice(0, -20) + '...'}</p>
         </div>
